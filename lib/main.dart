@@ -30,6 +30,9 @@ void main() {
   contador *= 4;
 
   estruturaControle();
+  mapExemplo();
+  lista();
+  setExemplo();
   runApp(const MyApp());
 }
 
@@ -57,6 +60,28 @@ void estruturaControle() {
     senha++;
   } while(senha < 1);
 
+}
+
+void lista() {
+  List<String> frutas = ['maçã', 'banana', 'uva', 'pessego'];
+
+  for (var fruta in frutas) {
+    print(fruta);
+  }
+}
+
+void mapExemplo() {
+  Map<String, int> notas = {'Ana': 8, 'Bruno': 6};
+
+  notas.forEach((aluno, nota) {
+    print('$aluno: $nota');
+  });
+}
+
+void setExemplo() {
+  Set<int> idsUnicos = {1, 2, 3};
+
+  print('Ids unicos $idsUnicos');
 }
 
 class MyApp extends StatelessWidget {
