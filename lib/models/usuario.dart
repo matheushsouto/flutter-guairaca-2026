@@ -1,19 +1,33 @@
 class Usuario {
-  final String nome;
-  final String email;
-  final String cpf;
+  String _nome;
+  String _email;
+  String _senha;
 
   Usuario({
-    required this.nome,
-    required this.email,
-    required this.cpf
-  });
+    required String nome,
+    required String email,
+    required String senha,
+  }) : _nome = nome,
+       _email = email,
+       _senha = senha;
+         
+  // Getters e setters
+  String get nome => _nome;
+  set nome(String novoNome) { _nome = novoNome;}
 
-  void apresentar() {
-    print('Olá meu nome é $nome meu email: $email meu cpf $cpf');
+  String get email => _email;
+  set email(String novoEmail) { _email = novoEmail; }
+
+  String get senha => _senha;
+  set senha(String novoSenha) { _senha = novoSenha; } 
+
+  // Metodo com retorno String
+  String exibirPerfil() {
+    return 'Usuario: $nome, Email: $email Senha: $senha';
   }
 
-  void _apresentarPrivado() {
-    print('Olá meu nome é $nome meu email: $email meu cpf $cpf');
+  // Meotodo sem retorno = void
+  void exibirInformacoes() {
+    print('Usuario $nome, email: $email, senha: $senha');
   }
 }

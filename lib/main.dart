@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uniguairaca/models/administrador.dart';
+import 'package:uniguairaca/models/usuario-comum.dart';
+import 'package:uniguairaca/models/usuario.dart';
 
 void main() {
   // Tipos basicos
@@ -28,11 +31,16 @@ void main() {
   int contador = 0;
   contador += 2;
   contador *= 4;
+  
+  List<Usuario> usuarios = [
+    Administrador(nome: 'Matheus', cargo: 'Analista', senha: '1234', email: 'mat@email'),
+    UsuarioComum(nome: 'Joao', email: 'joao@email', senha: '1234', vale: '500')
+  ];
 
-  estruturaControle();
-  mapExemplo();
-  lista();
-  setExemplo();
+  for (var usuario in usuarios) {
+    usuario.exibirInformacoes();
+  }
+
   runApp(const MyApp());
 }
 
