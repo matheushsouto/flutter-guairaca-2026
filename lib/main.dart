@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniguairaca/components/saudacao.dart';
 import 'package:uniguairaca/models/administrador.dart';
 import 'package:uniguairaca/models/usuario-comum.dart';
 import 'package:uniguairaca/models/usuario.dart';
@@ -97,13 +98,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return MaterialApp(
-        home: Scaffold(
-        appBar: AppBar(title: const Text('Olá flutter')),
-        body: const Center(
-        child: Text("Hello World", style: TextStyle(fontSize: 24),),
-    )
-  )
-  );
-}
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Saudacao(nome: "Matheus"),
+              Saudacao(nome: "Joao")
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
