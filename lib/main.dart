@@ -98,14 +98,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Saudacao(nome: "Matheus"),
-              Saudacao(nome: "Joao")
+              Saudacao(nome: "Joao"),
+              Text('Titulo da aula', style: TextStyle(color: Colors.deepOrange, fontSize: 32),),
+              Icon(
+                Icons.audiotrack,
+                color: Colors.green,
+                size: 30.0,
+              ),
+              Image.asset('../assets/images/logo.jpg', height: 180, width: 180, fit: BoxFit.cover,),
             ],
           ),
         ),
